@@ -8,7 +8,6 @@ import 'package:mobility_one/util/api_client.dart';
 import 'package:mobility_one/util/auth_util.dart';
 import 'package:mobility_one/util/util.dart';
 import 'package:oauth2/oauth2.dart' as oauth2;
-import 'dart:html' as html;
 
 part 'authentication_state.dart';
 
@@ -82,7 +81,7 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
     final authorizationUrl = grant
         .getAuthorizationUrl(AuthUtil.redirectUrl, scopes: AuthUtil.scopes)
         .toString();
-    html.window.location.assign(authorizationUrl);
+    //html.window.location.assign(authorizationUrl);
   }
 
   Future<void> makeLogin(
